@@ -19,12 +19,7 @@
       <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" id="navigation">
         {{-- request()->routeIs() dipakai untuk memberi class "active" pada menu yang sedang dibuka --}}
         {{-- Operator ternary (kondisi ? 'a' : 'b'): jika route sekarang "dashboard" tulis 'active', jika tidak tulis '' --}}
-        <li class="nav-item">
-          <a href="{{ route('dashboard') }}" class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
-            <i class="nav-icon bi bi-speedometer"></i>
-            <p>Dashboard</p>
-          </a>
-        </li>
+        
 
         {{-- nav-header: judul pengelompokan menu (tidak bisa diklik) --}}
         <li class="nav-header">MASTER DATA</li>
