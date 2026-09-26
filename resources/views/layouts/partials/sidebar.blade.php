@@ -7,7 +7,7 @@
   {{-- sidebar-brand: logo + nama aplikasi di atas sidebar --}}
   <div class="sidebar-brand">
     {{-- route('dashboard'): URL dari nama route "dashboard" --}}
-    <a href="{{ route('dashboard') }}" class="brand-link">
+    
       {{-- asset(): URL ke file gambar di folder public/adminlte/assets/img/ --}}
       <img src="{{ asset('adminlte/assets/img/AdminLTELogo.png') }}" alt="Logo" class="brand-image opacity-75 shadow" />
       <span class="brand-text fw-light">{{ config('app.name') }}</span>
@@ -35,42 +35,9 @@
             <p>Kategori</p>
           </a>
         </li>
-        {{-- menu Bahan: pola sama seperti menu Kategori --}}
-        <li class="nav-item">
-          <a href="{{ route('items.index') }}" class="nav-link {{ request()->routeIs('items.*') ? 'active' : '' }}">
-            <i class="nav-icon bi bi-box-seam"></i>
-            <p>Bahan</p>
-          </a>
-        </li>
+        
 
-        <li class="nav-header">TRANSAKSI</li>
-        {{-- menu-menu berikut: pola sama (route() untuk URL, routeIs() untuk class active) --}}
-        <li class="nav-item">
-          <a href="{{ route('stock-movements.index') }}" class="nav-link {{ request()->routeIs('stock-movements.*') ? 'active' : '' }}">
-            <i class="nav-icon bi bi-arrow-left-right"></i>
-            <p>Barang Masuk / Keluar</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="{{ route('reports.index') }}" class="nav-link {{ request()->routeIs('reports.*') ? 'active' : '' }}">
-            <i class="nav-icon bi bi-file-earmark-bar-graph"></i>
-            <p>Laporan Stok</p>
-          </a>
-        </li>
-
-        <li class="nav-header">PENGATURAN</li>
-        <li class="nav-item">
-          <a href="{{ route('admin.index') }}" class="nav-link {{ request()->routeIs('admin.*') ? 'active' : '' }}">
-            <i class="nav-icon bi bi-people"></i>
-            <p>Manajemen Admin</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="{{ route('profile.edit') }}" class="nav-link {{ request()->routeIs('profile.*') ? 'active' : '' }}">
-            <i class="nav-icon bi bi-person-gear"></i>
-            <p>Update Profile</p>
-          </a>
-        </li>
+        
       </ul>
     </nav>
   </div>
