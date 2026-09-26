@@ -40,7 +40,6 @@
             <th style="width: 3rem">No</th>
             <th>Nama</th>
             <th>Deskripsi</th>
-            <th style="width: 8rem">Jumlah Bahan</th>
             <th style="width: 10rem">Aksi</th>
           </tr>
         </thead>
@@ -55,11 +54,7 @@
               <td>{{ $category->name }}</td>
               {{-- ?? '-': operator null coalescing, jika deskripsi null tampilkan "-" --}}
               <td>{{ $category->description ?? '-' }}</td>
-              <td>
-                {{-- items_count berasal dari withCount('items') di controller --}}
-                {{-- route('items.index', ['category_id' => ...]): array kedua menjadi query string -> /items?category_id=5 (daftar bahan langsung terfilter) --}}
-                <a href="{{ route('items.index', ['category_id' => $category->id]) }}">{{ $category->items_count }} bahan</a>
-              </td>
+              
               <td>
                 {{-- route('categories.edit', $category): URL /categories/{id}/edit --}}
                 <a href="{{ route('categories.edit', $category) }}" class="btn btn-warning btn-sm">
